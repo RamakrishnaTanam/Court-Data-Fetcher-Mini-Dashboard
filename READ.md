@@ -66,4 +66,4 @@ Here are sample screenshots showing different stages of the app in action:
 ![Case Result](screenshots/search.png)
 
 ### 🧾 Case History or Error Page  
-![Case History / Error](creenshots/result.png)
+![Case History / Error](screenshots/result.png)
