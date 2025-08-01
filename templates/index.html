@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h2>Search Faridabad District Court Case</h2>
+  <form method="post" class="mt-4">
+    <div class="mb-3">
+      <label for="case_type" class="form-label">Case Type</label>
+      <select class="form-select" name="case_type" id="case_type" required>
+        {% for ct in case_types %}
+        <option value="{{ ct.code }}">{{ ct.desc }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="case_no" class="form-label">Case Number</label>
+      <input type="number" min="1" step="1" class="form-control" id="case_no" name="case_no" required>
+    </div>
+    <div class="mb-3">
+      <label for="filing_year" class="form-label">Filing Year</label>
+      <input type="number" class="form-control" id="filing_year" name="filing_year" min="2000" max="2025" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+{% endblock %}

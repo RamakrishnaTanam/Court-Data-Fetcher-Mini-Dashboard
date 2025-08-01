@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Search Results</h3>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><b>Case:</b> {{ case_type }} / {{ case_no }} / {{ filing_year }}</li>
+    <li class="list-group-item"><b>Parties:</b> {{ data.party_names }}</li>
+    <li class="list-group-item"><b>Filing Date:</b> {{ data.filing_date }}</li>
+    <li class="list-group-item"><b>Next Hearing:</b> {{ data.next_hearing }}</li>
+</ul>
+<h5>Recent Orders / Judgments:</h5>
+{% if data.pdfs %}
+  <table class="table table-bordered">
+    <thead>
+      <tr><th>Date</th><th>Order/Judgment PDF</th></tr>
+    </thead>
+    <tbody>
+      {% for pdf in data.pdfs %}
+      <tr>
+        <td>{{ pdf.date }}</td>
+        <td>
+          {% if pdf.url %}
+            <a class="btn btn-sm btn-success" target="_blank"
+              href="{{ url_for('download_pdf') }}?url={{ pdf.url|urlencode }}">Download PDF</a>
+          {% else %}
+            Not available
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No order/judgment PDFs found.</p>
+{% endif %}
+<a class="btn btn-secondary mt-2" href="{{ url_for('index') }}">New Search</a>
+{% endblock %}

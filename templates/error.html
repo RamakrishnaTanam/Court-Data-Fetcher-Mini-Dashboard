@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<div class="alert alert-danger" role="alert">
+  {{ message }}
+</div>
+<a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Search</a>
+{% endblock %}
