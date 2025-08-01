@@ -45,6 +45,8 @@ Define this in a .env file like:
 
 # .env
 CAPTCHA_API_KEY=your_key_here
+
+
 USE_PROXY=False
 
 
