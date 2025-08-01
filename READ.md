@@ -25,23 +25,28 @@ Website: https://districts.ecourts.gov.in/faridabad
 
 ---
 
-CAPTCHA Strategy
-The Faridabad court site currently does not enforce CAPTCHA for basic case info queries via POST requests.
+## CAPTCHA Strategy
 
-However, the scraping layer (scraping.py) is modular and can be extended to:
 
-Handle image CAPTCHA using 2Captcha/AntiCaptcha API
+-The Faridabad court site currently does not enforce CAPTCHA for basic case info queries via POST requests.
 
-Handle session headers and rotating proxies
+-However, the scraping layer (scraping.py) is modular and can be extended to:
 
-Environment Variables
+-Handle image CAPTCHA using 2Captcha/AntiCaptcha API
+
+-Handle session headers and rotating proxies
+
+## Environment Variables
+
 No API keys are required for this basic scraper.
-However, if you later integrate proxies or CAPTCHA bypass (like 2Captcha or AntiCaptcha), define this in a .env file like:
+However, if you later integrate proxies or CAPTCHA bypass (like 2Captcha or AntiCaptcha), 
+Define this in a .env file like:
 
 
 # .env
 CAPTCHA_API_KEY=your_key_here
 USE_PROXY=False
+
 
 ##  Setup Steps
 
