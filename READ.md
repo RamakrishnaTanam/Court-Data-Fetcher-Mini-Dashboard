@@ -59,11 +59,12 @@ docker run -p 5000:5000 court-fetcher
 
 Here are sample screenshots showing different stages of the app in action:
 
+### 🔍 Dashboard View  
+![Dashboard View](screenshots/dashboard.png)
+
 ### 🔍 Search Form  
-![Search Form](dashboard.png)
+![Search Form](screenshots/search.png)
 
-### 📄 Result Display  
-![Case Result](screenshots/search.png)
+### 🧾 Case Result / Error Page  
+![Result](screenshots/result.png)
 
-### 🧾 Case History or Error Page  
-![Case History / Error](screenshots/result.png)
