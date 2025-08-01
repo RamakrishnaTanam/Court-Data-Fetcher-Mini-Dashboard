@@ -50,6 +50,16 @@ CAPTCHA_API_KEY=your_key_here
 USE_PROXY=False
 
 
+## Future Improvements
+Add pagination for multi-order history
+
+Integrate OCR or CAPTCHA-solving modules
+
+Deploy on Railway/Render/Vercel (for public access)
+
+CI/CD with GitHub Actions
+
+
 ##  Setup Steps
 
 ###  Local Setup (for Development)
