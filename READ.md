@@ -88,18 +88,3 @@ docker build -t court-fetcher .
 
 # Run container
 docker run -p 5000:5000 court-fetcher
-
-
-##  Screenshots 
-
-Here are sample screenshots showing different stages of the app in action:
-
-### 🔍 Dashboard View  
-![Dashboard View](screenshots/dashboard.png)
-
-### 🔍 Search Form  
-![Search Form](screenshots/search.png)
-
-### 🧾 Case Result / Error Page  
-![Result](screenshots/result.png)
-
